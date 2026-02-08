@@ -1,401 +1,217 @@
-# Playwright_AI_Powered - Complete Learning & Automation Framework
+# 🤖 Playwright AI Batch - AI-Powered QA Automation
 
-Comprehensive project combining AI/ML foundations with enterprise-level Selenium automation testing for Salesforce.
+<p align="center">
+  <img src="https://img.shields.io/badge/AI-Powered%20QA-blueviolet?style=for-the-badge" alt="AI Powered QA">
+  <img src="https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright">
+  <img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white" alt="Selenium">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+</p>
 
-## Project Overview
+---
 
-Playwright_AI_Powered is a two-chapter project that bridges theoretical AI/ML knowledge with practical automation testing. It provides foundational understanding of AI concepts and implements production-ready automation frameworks.
+**Author:** Meeti Jha 
+---
 
-## Project Structure
+## 📖 Course Overview
+
+This repository contains hands-on materials for mastering **AI-Powered Test Automation**. Learn how to leverage Large Language Models (LLMs) for intelligent test case generation, automation framework development, and enterprise QA practices.
+
+---
+
+## 📚 Table of Contents
+
+| Chapter | Title | Description |
+|---------|-------|-------------|
+| **Chapter 1** | [Foundation Model](#chapter-1-foundation-model) | AI/ML fundamentals, LLM comparisons, and setup guides |
+| **Chapter 2** | [Prompt Engineering](#chapter-2-prompt-engineering) | Prompt frameworks and enterprise automation |
+
+---
+
+## 📁 Repository Structure
 
 ```
-Playwright_AI_Powered/
-├── chapter_01_foundations/          # AI/ML/DL Fundamentals
-│   ├── ch_01_ml_ai_deep_learning.md
-│   ├── ch_01_llm_comparisons.md
-│   ├── ch_01_anti_hallucination_rule.md
+PlaywrightAIBatch/
+├── README.md
+├── chapter_01_foundations/           # AI/ML Fundamentals
+│   ├── ch_01_ml_ai_deep_learning.md  # AI vs ML vs Deep Learning
+│   ├── ch_01_llm_comparisons.md      # Model comparison guide
+│   ├── ch_01_anti_hallucination_rule.md  # Anti-hallucination rules
 │   └── practical_guides/
-│       └── ch_01_local_llm_setup_ollama.md
-├── chapter_02_prompts/              # Prompt Engineering & Automation
-│   ├── Prompt_Frameworks.md
-│   ├── RICEPOT.md
-│   ├── anti_hallucinations_rules.md
-│   └── SeleniumFramework/           # Selenium Automation Framework
-│       ├── pom.xml
-│       ├── src/
-│       │   ├── main/java/pages/
-│       │   │   └── LoginPage.java
-│       │   └── test/java/
-│       │       ├── base/BaseTest.java
-│       │       ├── tests/
-│       │       │   ├── LoginValidTest.java
-│       │       │   └── LoginInvalidTest.java
-│       │       └── resources/testng.xml
-│       └── README.md
-└── README.md (this file)
+│       └── ch_01_local_llm_setup_ollama.md  # Ollama setup
+│
+└── chapter_02_prompts/               # Prompt Engineering
+    ├── RICEPOT.md                    # RICEPOT framework example
+    ├── Prompt_Frameworks.md          # STAR, CLEAR, CRISP frameworks
+    └── SeleniumFramework/            # Enterprise Selenium Framework
+        ├── pom.xml                   # Maven configuration
+        ├── testng.xml                # TestNG suite
+        └── src/
+            ├── main/java/com/salesforce/
+            │   ├── base/BaseTest.java    # Test base class
+            │   └── pages/LoginPage.java  # Page Object Model
+            └── test/java/com/salesforce/tests/
+                ├── ValidLoginTest.java   # Positive test cases
+                └── InvalidLoginTest.java # Negative test cases
 ```
 
 ---
 
-## Chapter 01: Foundations
+## 📗 Chapter 1: Foundation Model
 
-### Overview
-Foundational knowledge in Machine Learning, Artificial Intelligence, and Deep Learning with practical setup instructions for local LLM deployment.
+### 🎯 Learning Objectives
 
-### Files
+- Understand the difference between AI, ML, and Deep Learning
+- Compare closed-source vs open-source LLMs
+- Set up local LLMs for QA workflows
+- Apply anti-hallucination rules
+
+### 📄 Topics Covered
 
 | File | Description |
 |------|-------------|
-| **ch_01_ml_ai_deep_learning.md** | Core concepts: ML principles, AI fundamentals, DL architectures, and relationships between ML/AI/DL |
-| **ch_01_llm_comparisons.md** | Comprehensive comparison of Large Language Models, architectures, capabilities, and use cases |
-| **ch_01_anti_hallucination_rule.md** | Strategies and techniques to prevent AI model hallucinations |
-| **practical_guides/ch_01_local_llm_setup_ollama.md** | Step-by-step guide to set up and run LLMs locally using Ollama |
+| `ch_01_ml_ai_deep_learning.md` | Comprehensive guide on AI → ML → Deep Learning → LLMs hierarchy |
+| `ch_01_llm_comparisons.md` | Comparison of GPT-4, Claude, Llama, Mistral, and other models |
+| `ch_01_anti_hallucination_rule.md` | Rules to prevent AI from making up information |
+| `ch_01_local_llm_setup_ollama.md` | Step-by-step Ollama installation and configuration |
 
-### Key Topics
+### 🧠 Key Concepts
 
-- **Machine Learning**: Algorithms, training methodologies, model evaluation
-- **Artificial Intelligence**: Applications, ethics, real-world implementations
-- **Deep Learning**: Neural networks, architectures, optimization techniques
-- **LLM Comparison**: Feature analysis, performance benchmarks, selection criteria
-- **Hallucination Prevention**: Validation techniques, reliability assurance
-- **Local LLM Setup**: Ollama configuration, model management, inference optimization
+```
+┌─────────────────────────────────────────────────────────┐
+│                ARTIFICIAL INTELLIGENCE                   │
+│    ┌─────────────────────────────────────────────┐     │
+│    │           MACHINE LEARNING                   │     │
+│    │    ┌─────────────────────────────────┐     │     │
+│    │    │       DEEP LEARNING             │     │     │
+│    │    │   ┌─────────────────────┐      │     │     │
+│    │    │   │   LLMs (GPT, etc.) │      │     │     │
+│    │    │   └─────────────────────┘      │     │     │
+│    │    └─────────────────────────────────┘     │     │
+│    └─────────────────────────────────────────────┘     │
+└─────────────────────────────────────────────────────────┘
+```
 
-### Learning Path
+### 📊 LLM Decision Matrix
 
-1. **Start**: ch_01_ml_ai_deep_learning.md - Build foundational knowledge
-2. **Explore**: ch_01_llm_comparisons.md - Understand LLM landscape
-3. **Learn**: ch_01_anti_hallucination_rule.md - Ensure reliability
-4. **Practice**: practical_guides/ch_01_local_llm_setup_ollama.md - Hands-on setup
+| Scenario | Recommended Model |
+|----------|-------------------|
+| Confidential data | Open-Source (Ollama) |
+| Best accuracy needed | GPT-4 / Claude Opus |
+| Budget constrained | Open-Source / GPT-3.5 |
+| High volume generation | Open-Source |
+| Code-heavy testing | DeepSeek / CodeLlama |
+
+---
+
+## 📘 Chapter 2: Prompt Engineering
+
+### 🎯 Learning Objectives
+
+- Master prompt engineering frameworks
+- Generate enterprise-level automation code
+- Build Page Object Model frameworks
+- Implement robust test automation
+
+### 📄 Topics Covered
+
+| File | Description |
+|------|-------------|
+| `RICEPOT.md` | Role, Intent, Context, Expected, Persona, Output, Task framework |
+| `Prompt_Frameworks.md` | STAR, CLEAR, CRISP frameworks comparison |
+| `SeleniumFramework/` | Complete enterprise Selenium + Java automation framework |
+
+### 🔧 Prompt Frameworks Quick Reference
+
+```
+RICE POT = Role + Intent + Context + Expected + Persona + Output + Task
+STAR     = Situation + Task + Action + Result
+CLEAR    = Context + Language + Examples + Audience + Result
+CRISP    = Context + Request + Input + Scope + Parameters
+```
+
+### 🏗️ Enterprise Selenium Framework
+
+The `SeleniumFramework` folder contains a production-ready automation framework:
+
+**Technologies:**
+- Java 17
+- Selenium 4.18.1
+- TestNG 7.9.0
+- Maven
+- WebDriverManager
+
+**Features:**
+- ✅ Page Object Model with PageFactory
+- ✅ XPath-only locators
+- ✅ WebDriverWait (no Thread.sleep)
+- ✅ Robust exception handling
+- ✅ 10 valid login test cases
+- ✅ 15 invalid login test cases (including security tests)
+
+**Running the Tests:**
+
+```bash
+cd chapter_02_prompts/SeleniumFramework
+mvn clean test
+```
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Basic programming knowledge
-- Familiarity with command line/terminal
-- System resources (8GB+ RAM recommended for local LLMs)
+- Java 17+
+- Maven 3.8+
+- Node.js 18+ (for Playwright projects)
+- Chrome/Firefox browser
 
----
+### Quick Start
 
-## Chapter 02: Prompts & Automation
-
-### Overview
-Advanced prompt engineering techniques and enterprise-level Selenium automation framework for Salesforce login testing.
-
-### Part A: Prompt Engineering
-
-#### Files
-
-| File | Description |
-|------|-------------|
-| **Prompt_Frameworks.md** | Comprehensive frameworks for effective prompt design and optimization |
-| **RICEPOT.md** | RICEPOT methodology: Role, Instructions, Context, Examples, Persona, Output, Tone |
-| **anti_hallucinations_rules.md** | Advanced techniques to prevent LLM hallucinations in production |
-
-#### Key Topics
-
-- **Prompt Frameworks**: Design patterns, structuring effective prompts, optimization strategies
-- **RICEPOT Framework**: Structured approach to crafting precise prompts
-  - **Role**: Define assistant perspective
-  - **Instructions**: Specify exact requirements
-  - **Context**: Provide background information
-  - **Examples**: Show desired output format
-  - **Persona**: Customize interaction style
-  - **Output**: Define response structure
-  - **Tone**: Set communication style
-- **Hallucination Prevention**: Verification methods, fact-checking, validation patterns
-
-### Part B: Selenium Automation Framework
-
-#### Overview
-Enterprise-grade Selenium automation framework for testing Salesforce login with Page Object Model, TestNG, and Maven.
-
-#### Technology Stack
-
-| Technology | Version |
-|-----------|---------|
-| Selenium WebDriver | 4.15.0 |
-| TestNG | 7.8.1 |
-| Maven | 3.11.0 |
-| WebDriverManager | 5.6.3 |
-| Java | 11+ |
-
-#### Framework Structure
-
-**Page Object Model**
-- `LoginPage.java` - Complete page object with PageFactory
-- XPath-based selectors (no CSS/ID)
-- Reusable action methods
-- Comprehensive exception handling
-
-**Test Classes**
-- `LoginValidTest.java` - 6 test cases for valid login scenarios
-- `LoginInvalidTest.java` - 10 test cases for invalid login scenarios
-
-**Configuration**
-- `BaseTest.java` - Setup/teardown with TestNG lifecycle
-- `pom.xml` - Maven dependencies and build configuration
-- `testng.xml` - Test suite execution configuration
-
-#### Test Coverage
-
-**LoginValidTest (6 cases)**
-1. Login page UI elements verification
-2. Successful login with valid credentials
-3. Login with remember me functionality
-4. Remember me checkbox functionality
-5. Username field input validation
-6. Password field input validation
-
-**LoginInvalidTest (10 cases)**
-1. Invalid username login attempt
-2. Invalid password login attempt
-3. Both credentials invalid
-4. Empty username validation
-5. Empty password validation
-6. Both credentials empty
-7. Special characters in username
-8. SQL injection attempt detection
-9. Whitespace-only username
-10. Very long password handling
-
-#### Framework Features
-
-✓ Page Object Model with PageFactory  
-✓ XPath-only locators (no CSS/ID/name selectors)  
-✓ WebDriverWait for explicit synchronization  
-✓ Robust exception handling with try-catch blocks  
-✓ TestNG annotations (@Test, @BeforeTest, @AfterTest, @BeforeSuite, @AfterSuite)  
-✓ WebDriverManager for automatic driver management  
-✓ Implicit and explicit wait strategies  
-✓ No Thread.sleep() usage  
-✓ Enterprise-grade code standards  
-✓ Zero comments in production code  
-✓ 16 comprehensive test cases  
-✓ CI/CD ready configuration  
-
-#### Quick Start
-
-**Prerequisites**
-- Java 11 or higher
-- Maven 3.6+
-- Chrome/Firefox/Edge browser
-
-**Installation**
 ```bash
+# Clone the repository
+git clone https://github.com/meetijha/Playwright_AI_Powered.git
+cd Playwright_AI_Powered
+
+# Run Selenium tests
 cd chapter_02_prompts/SeleniumFramework
-mvn clean install
-```
-
-**Run All Tests**
-```bash
-mvn test
-```
-
-**Run Specific Test Class**
-```bash
-mvn test -Dtest=LoginValidTest
-mvn test -Dtest=LoginInvalidTest
-```
-
-**Run with TestNG Configuration**
-```bash
-mvn test -DsuiteXmlFile=src/test/resources/testng.xml
-```
-
-#### Code Example
-
-**Page Object Model**
-```java
-public class LoginPage {
-    @FindBy(xpath = "//input[@id='username']")
-    private WebElement usernameField;
-
-    @FindBy(xpath = "//input[@id='password']")
-    private WebElement passwordField;
-
-    @FindBy(xpath = "//input[@id='Login']")
-    private WebElement loginButton;
-
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        PageFactory.initElements(driver, this);
-    }
-
-    public void performLogin(String username, String password) throws Exception {
-        enterUsername(username);
-        enterPassword(password);
-        clickLoginButton();
-    }
-}
-```
-
-**Test Implementation**
-```java
-public class LoginValidTest extends BaseTest {
-    private LoginPage loginPage;
-
-    @BeforeTest
-    @Override
-    public void setUp() throws Exception {
-        super.setUp();
-        loginPage = new LoginPage(driver);
-    }
-
-    @Test(description = "Verify successful login with valid credentials")
-    public void testValidLogin() throws Exception {
-        loginPage.navigateToLoginPage();
-        loginPage.performLogin("test@example.com", "Password123");
-        Assert.assertNotEquals(driver.getCurrentUrl(), 
-            "https://login.salesforce.com/?locale=in");
-    }
-}
+mvn clean test
 ```
 
 ---
 
-## Chapter Learning Sequence
+## 🛠️ Technology Stack
 
-### Recommended Path
-
-1. **Week 1: Foundations**
-   - Complete Chapter 01: ML/AI/DL concepts
-   - Study LLM comparisons
-   - Learn hallucination prevention
-   - Set up local Ollama environment
-
-2. **Week 2: Prompt Engineering**
-   - Study prompt frameworks
-   - Master RICEPOT methodology
-   - Review anti-hallucination techniques
-   - Practice prompt optimization
-
-3. **Week 3-4: Selenium Automation**
-   - Understand Page Object Model
-   - Study test implementation
-   - Set up automation framework
-   - Write and execute tests
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **Selenium** | 4.18.1 | Browser automation |
+| **TestNG** | 7.9.0 | Test framework |
+| **Playwright** | Latest | Modern automation |
+| **Java** | 17 | Primary language |
+| **Maven** | 3.8+ | Build tool |
+| **Ollama** | Latest | Local LLM hosting |
 
 ---
 
-## Best Practices Implemented
+## 📖 Recommended Learning Path
 
-### Chapter 01
-- Comprehensive theoretical foundation
-- Practical hands-on guides
-- Real-world application examples
-- Structured learning path
+```
+Week 1: Chapter 1 - Foundation Model
+├── Day 1-2: AI/ML/Deep Learning fundamentals
+├── Day 3-4: LLM comparisons and selection
+├── Day 5-6: Set up Ollama locally
+└── Day 7: Practice anti-hallucination rules
 
-### Chapter 02
-
-**Prompt Engineering**
-- Structured frameworks for prompt design
-- RICEPOT methodology for consistency
-- Hallucination prevention techniques
-- Production-ready patterns
-
-**Automation Framework**
-- Page Object Model with PageFactory
-- XPath-only selectors for robustness
-- WebDriverWait for reliable synchronization
-- Explicit exception handling
-- TestNG lifecycle management
-- Maven build automation
-- No anti-patterns (no Thread.sleep, no CSS selectors)
-- Enterprise-grade code standards
-- Clean architecture and modularity
-- Comprehensive test coverage
-- CI/CD ready configuration
-
+Week 2: Chapter 2 - Prompt Engineering
+├── Day 1-2: Master RICEPOT framework
+├── Day 3-4: Learn STAR, CLEAR, CRISP
+├── Day 5-6: Generate automation code with prompts
+└── Day 7: Build your own framework
+```
 ---
 
-## Target Audience
+## ⭐ Star This Repo
 
-- **AI/ML Learners**: Understanding ML, AI, and DL concepts
-- **LLM Practitioners**: Deploying and optimizing language models
-- **Prompt Engineers**: Crafting effective prompts with RICEPOT
-- **QA Automation Testers**: Implementing enterprise automation frameworks
-- **Salesforce Users**: Testing CRM login functionality
-- **Development Teams**: Building reliable automation with best practices
+If you find this helpful, please ⭐ star this repository to support the project!
 
 ---
-
-## Key Takeaways
-
-**Chapter 01**
-- Solid foundation in ML/AI/DL principles
-- Understanding of LLM capabilities and limitations
-- Knowledge of hallucination prevention
-- Practical skills for local LLM deployment
-
-**Chapter 02**
-- Advanced prompt engineering techniques
-- Enterprise Selenium framework patterns
-- Production-ready automation code
-- Salesforce login testing expertise
-- TestNG and Maven proficiency
-
----
-
-## Getting Help
-
-### Chapter 01 Resources
-- Review markdown files for detailed explanations
-- Follow step-by-step practical guides
-- Experiment with local Ollama setup
-
-### Chapter 02 Resources
-- Study prompt framework examples
-- Review Selenium test implementations
-- Refer to code examples in test files
-- Check TestNG configuration in testng.xml
-
----
-
-## Contributing & Customization
-
-### Extend Automation Framework
-1. Add new page objects to `src/main/java/pages/`
-2. Create test classes extending `BaseTest`
-3. Update `testng.xml` with new test classes
-4. Run `mvn test` to validate
-
-### Customize Test Data
-- Modify credentials in test methods
-- Add parameterized tests with TestNG
-- Create external data sources for test cases
-
----
-
-## Project Status
-
-✅ Chapter 01: Complete  
-✅ Chapter 02: Complete  
-✅ Selenium Framework: Production-Ready  
-✅ Documentation: Comprehensive  
-
----
-
-## Version Information
-
-- **Project Version**: 1.0.0
-- **Last Updated**: February 2026
-- **Java Version**: 11+
-- **Maven Version**: 3.6+
-
----
-
-## Author
-
-- **Name**: Meeti Jha
-- **Role**: QA Automation Engineer
-- **Expertise**: Selenium, Java, TestNG, Maven, CRM Automation, Salesforce Testing
-
----
-
-## License & Usage
-
-This project is designed for educational and professional learning purposes. Use as reference material and customize for specific organizational needs.
-
----
-
-**Start Your Journey**: Begin with [chapter_01_foundations](chapter_01_foundations/) or jump to [chapter_02_prompts](chapter_02_prompts/) based on your learning goals.
