@@ -1,4 +1,4 @@
-# 🤖 Playwright AI Batch - AI-Powered QA Automation
+# 🤖 AI-Powered QA Automation
 
 <p align="center">
   <img src="https://img.shields.io/badge/AI-Powered%20QA-blueviolet?style=for-the-badge" alt="AI Powered QA">
